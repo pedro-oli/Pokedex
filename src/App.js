@@ -56,9 +56,22 @@ class App extends React.Component {
     }
 
     handleClick(event) {
-        this.setState({
-            currentPage: Number(event.target.id)
-        })
+        const { currentPage } = this.state;
+        const id = event.target.id;
+
+        if (id === "previous") {
+            this.setState({
+                currentPage: currentPage - 1
+            })
+        } else if (id === "next") {
+            this.setState({
+                currentPage: currentPage + 1
+            })
+        } else {
+            this.setState({
+                currentPage: Number(id)
+            })
+        }
     }
 
     handleSearch(event) {
@@ -101,7 +114,7 @@ class App extends React.Component {
                 <SearchField handleSearch={this.handleSearch} />
                 <TypeFilter handleType={this.handleType} />
                 <PokemonList currentPokemons={currentPokemons} />
-                <Pagination handleClick={this.handleClick} pageNumbers={pageNumbers} />
+                <Pagination currentPage={currentPage} handleClick={this.handleClick} pageNumbers={pageNumbers} />
             </div>
         )
     }

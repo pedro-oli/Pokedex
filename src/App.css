@@ -13,11 +13,24 @@
 }
 
 #page-numbers {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     margin-top: 1em;
 }
 
+#page-numbers button {
+    width: 100%;
+    background-color: white;
+}
+
+#page-numbers .current {
+    color: red;
+    font-weight: bold;
+}
+
 #page-numbers li {
-    float: left;
+    width: 3%;
     margin-right: 1em;
+    float: left;
 }
