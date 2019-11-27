@@ -1,11 +1,25 @@
 * {
-    font: 100% Helvetica, sans-serif;
+    font: 100% Georgia;
+    color: white;
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+        font-size: 13px;
+    }
+    #page-numbers {
+        flex-wrap: wrap;
+    }
+    #page-numbers button {
+        height: 4vw;
+    }
 }
 
 html,
 body,
 ul,
 ol {
+    background-color: #e51d20;
     margin: 0;
     padding: 0;
 }

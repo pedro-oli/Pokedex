@@ -111,8 +111,10 @@ class App extends React.Component {
 
         return (
             <div>
-                <SearchField handleSearch={this.handleSearch} />
-                <TypeFilter handleType={this.handleType} />
+                <nav>
+                    <SearchField handleSearch={this.handleSearch} />
+                    <TypeFilter handleType={this.handleType} />
+                </nav>
                 <PokemonList currentPokemons={currentPokemons} />
                 <Pagination currentPage={currentPage} handleClick={this.handleClick} pageNumbers={pageNumbers} />
             </div>

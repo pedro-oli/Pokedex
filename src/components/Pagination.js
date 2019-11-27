@@ -3,12 +3,15 @@ import React from 'react'
 class Pagination extends React.Component {
     render() {
         const { currentPage, handleClick, pageNumbers } = this.props
-        console.log("currentPage: ", currentPage)
 
         return (
             <ul id="page-numbers">
                 <li>
-                    <button id="previous" onClick={handleClick} disabled={!(currentPage > 1)}>
+                    <button
+                        id="previous"
+                        onClick={handleClick}
+                        disabled={!(currentPage > 1)}
+                    >
                         ◄
                     </button>
                 </li>
